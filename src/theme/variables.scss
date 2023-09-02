@@ -74,6 +74,14 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** color de letra UC de logo duocUC **/
+  --ion-color-uc: #0d0e22;
+	--ion-color-uc-rgb: 34,52,93;
+	--ion-color-uc-contrast: #ffffff;
+	--ion-color-uc-contrast-rgb: 255,255,255;
+	--ion-color-uc-shade: #1e2e52;
+	--ion-color-uc-tint: #38486d;
 }
 
 @media (prefers-color-scheme: dark) {

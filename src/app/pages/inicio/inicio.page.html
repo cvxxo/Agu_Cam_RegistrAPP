@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Inicio</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title class="titulo">RegistrAPP</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="mostrarMenu()">
         <ion-icon slot="icon-only" name="menu"></ion-icon>
@@ -8,3 +8,13 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-content color="uc">
+  <div class="div_fondo">
+    <img class="logo" src="assets/icon/RegistrApp.png">
+    
+    <ion-button class="buttons" color="secondary" routerLink="/login">Login</ion-button>
+
+    <ion-button class="buttons" color="warning" routerLink="/registro">Registrarse</ion-button>
+  </div>
+</ion-content>

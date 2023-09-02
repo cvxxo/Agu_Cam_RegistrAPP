@@ -1,0 +1,21 @@
+.titulo{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.logo{
+    padding: 7%;
+}
+
+.buttons{
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.div_fondo{
+    background-color: var(--ion-color-uc);
+    width: 100%;
+    height: 100%;
+}
