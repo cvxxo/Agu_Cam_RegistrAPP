@@ -1,10 +1,48 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Acerca de la App</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar class="titulo">
+    <ion-title>Acerca de</ion-title>
     <ion-buttons slot="start">
-      <ion-button (click)="mostrarMenu()">
-        <ion-icon slot="icon-only" name="menu"></ion-icon>
-      </ion-button>
+      <ion-back-button defaultHref="/"
+        text="Volver"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-content [fullscreen]="true" class="contenido">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Información</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="carta1">
+    <ion-card-header>
+      <ion-card-title style="color: white;">RegistrAPP</ion-card-title>
+      <ion-card-subtitle style="color:white">¿Para qué sirve?</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content class="texto">
+      Buscamos facilitar el registro de asistencia en las salas de clases en formato presencial,
+        evitando una mala experiencia para los docentes así como los alumnos, logrando que el proceso
+        de registro de asistencia sea mucho mas sencillo mediante codigos QR
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card class="carta1">
+      <ion-card-header>
+        <ion-card-title style="color: white;">¿Quienes desarrollan esta solución?</ion-card-title>
+        
+      </ion-card-header>
+      <ion-card-content class="texto">
+        Somos dos alumnos de Duoc aprendiendo el lenguaje Angular/Ionic.
+        Nuestros nombre son Camilo Canales y Agustin Valenzuela
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+
+
+
+</ion-content>

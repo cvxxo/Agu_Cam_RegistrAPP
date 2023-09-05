@@ -1,10 +1,58 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
+  <ion-toolbar class="header-color">
+    <ion-title class="titulo" mode="md">Iniciar sesión</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="mostrarMenu()">
         <ion-icon slot="icon-only" name="menu"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <!--
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="Volver"></ion-back-button>
+    </ion-buttons>-->
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content [fullscreen]="false" class="contenido">
+  <!--
+  <ion-header collapse="condense" >
+    <ion-toolbar color="#e0ac08">
+      <ion-title size="large" class="colorletra1">Iniciar sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>-->
+
+  <ion-card class="fondocard">
+    <ion-card-header>
+        <ion-card-title mode="md" class="card_titulo">Ingresa tus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+
+        <ion-item class="item" mode="md">
+          <ion-label position="floating">Email: </ion-label>
+          <ion-input type="email" placeholder="marulete@duocuc.cl" 
+                    name="email" [(ngModel)]="alumno.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="item" mode="md">
+          <ion-label position="floating">Password: </ion-label>
+          <ion-input type="password" placeholder="ConstraseñaSecreta123"
+                      name="password" [(ngModel)]="alumno.password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="Enviar()" expand="block" fill="solid" color="success" shape="round" size="default"
+                    style="margin-top: 5%;">
+          Ingresar
+        </ion-button>
+        
+        <ion-button (click)="EnviarOtro()" expand="block" fill="clear" class="oMContra_button" shape="round">            
+          Olvidé mi contraseña
+        </ion-button>
+        <br>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

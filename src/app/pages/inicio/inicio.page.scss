@@ -1,6 +1,7 @@
-.titulo{
-    text-decoration: underline;
+.titulo {
     font-style: italic;
+    text-decoration: underline;
+    color: #d3c509;
 }
 
 .logo{
@@ -19,3 +20,11 @@
     width: 100%;
     height: 100%;
 }
+
+.header-color {
+    --background: linear-gradient( #0e0b44, #100f6b );
+}
+
+.contenido {
+    --background: linear-gradient( #100f6b, #e0ac08 );
+} 

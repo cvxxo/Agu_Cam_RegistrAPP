@@ -1,0 +1,41 @@
+.titulo {
+  font-style: italic;
+  text-decoration: underline;
+  color: #d3c509;
+}
+
+.contenido {
+  --background: linear-gradient( #100f6b, #e0ac08 );
+} 
+
+.fondocard {
+  --background: linear-gradient( #110f6b, #e0ae08 );
+}
+
+.select{
+  border: black solid;
+}
+
+/*.listacolor{
+  --color: #e0ae08a9;
+}*/
+
+.item{
+  --background:  #255e703a;
+}
+
+/*.color1{
+  --background: linear-gradient(#e0ac08,#1e0f5f63);
+}
+
+.color2{
+  --background: #e0ac08;
+}*/
+
+.header-color {
+--background: linear-gradient( #0e0b44, #100f6b );
+}
+
+.card_titulo{
+--color: #eeeeee;
+}
