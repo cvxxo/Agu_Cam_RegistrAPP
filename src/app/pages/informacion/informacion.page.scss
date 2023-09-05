@@ -1,12 +1,17 @@
 .titulo {
-    --background:#100f6b ;
-    --color: white;
-    font-style: italic;
-  }
-  .contenido {
-    --background: linear-gradient( #100f6b ,#e0ac08 );
-    }
+  font-style: italic;
+  text-decoration: underline;
+  color: #d3c509;
+}
+  
+.contenido {
+  --background: linear-gradient( #100f6b ,#e0ac08 );
+}
 
-    .carta1{
-        --background:  #493e0d;
-    }
+.carta1{
+  --background:  #493e0d;
+}
+
+.header-color {
+  --background: linear-gradient( #0e0b44, #100f6b );
+}
