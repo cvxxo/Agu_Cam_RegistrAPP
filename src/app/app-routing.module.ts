@@ -1,35 +1,25 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { RegistroDComponent } from './pages/registro-d/registro-d.component';
+import { LoginDComponent } from './pages/login-d/login-d.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'inicio',
-    pathMatch: 'full'
+    path:'registro-d',
+    component: RegistroDComponent
   },
   {
-    path: 'inicio',
-    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+    path:'login-d',
+    component: LoginDComponent
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'registro',
-    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
-  },
-  {
-    path: 'informacion',
-    loadChildren: () => import('./pages/informacion/informacion.module').then( m => m.InformacionPageModule)
-  },
-
+    path:'**',
+    redirectTo: 'registro-d'
+  }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

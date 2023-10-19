@@ -1,0 +1,65 @@
+{
+  "docentes": [
+    {
+      "correo": "aaa",
+      "nombre": "aaa",
+      "apellido": "aaa",
+      "contrasena": "aaa",
+      "idAsignatura1": "1",
+      "idAsignatura2": "2",
+      "id": 1
+    },
+    {
+      "correo": "prueba2@gmail.com",
+      "nombre": "sdfsdfsd",
+      "apellido": "sdfsdfsdf",
+      "contrasena": "sdfsdfsdfs",
+      "idAsignatura1": "1",
+      "idAsignatura2": "1",
+      "id": 2
+    },
+    {
+      "correo": "prueba2@gmail.com",
+      "nombre": "adasdsad",
+      "apellido": "asdasdasd",
+      "contrasena": "asdasdad",
+      "idAsignatura1": "4",
+      "idAsignatura2": "3",
+      "id": 3
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": 1,
+      "nombre": "Nivelación Matemática",
+      "seccion": "010D",
+      "año": 2023,
+      "semestre": 1,
+      "horas_sem": 5
+    },
+    {
+      "id": 2,
+      "nombre": "Inglés",
+      "seccion": "009D",
+      "año": 2023,
+      "semestre": 1,
+      "horas_sem": 5
+    },
+    {
+      "id": 3,
+      "nombre": "Emprendimiento",
+      "seccion": "008D",
+      "año": 2023,
+      "semestre": 2,
+      "horas_sem": 5
+    },
+    {
+      "id": 4,
+      "nombre": "Arquitectura",
+      "seccion": "007D",
+      "año": 2023,
+      "semestre": 2,
+      "horas_sem": 5
+    }
+  ]
+}
