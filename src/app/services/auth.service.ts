@@ -15,4 +15,8 @@ export class AuthService {
   getUserByEmail(email:string):Observable<iDocente>{
     return this.http.get<iDocente>(this.urlApiD+`${email}`);
   }
+
+  isLoggedIn(){
+    return sessionStorage.getItem('nombre')!=null;
+  }
 }

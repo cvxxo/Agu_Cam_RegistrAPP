@@ -1,22 +1,22 @@
 {
   "docentes": [
     {
-      "correo": "aaa",
-      "nombre": "aaa",
-      "apellido": "aaa",
-      "contrasena": "aaa",
-      "idAsignatura1": "1",
-      "idAsignatura2": "2",
-      "id": 1
-    },
-    {
       "correo": "prueba2@gmail.com",
-      "nombre": "sdfsdfsd",
-      "apellido": "sdfsdfsdf",
-      "contrasena": "sdfsdfsdfs",
+      "nombre": "UserPrueba",
+      "apellido": "UserPrueba",
+      "contrasena": "12345678",
       "idAsignatura1": "1",
       "idAsignatura2": "1",
       "id": 2
+    },
+    {
+      "correo": "prueba1@gmail.com",
+      "nombre": "Marco",
+      "apellido": "Martinez",
+      "contrasena": "12345678",
+      "idAsignatura1": "2",
+      "idAsignatura2": "3",
+      "id": 3
     }
   ],
   "asignaturas": [
@@ -51,6 +51,14 @@
       "año": 2023,
       "semestre": 2,
       "horas_sem": 5
+    }
+  ],
+  "fechasEvaluaciones": [
+    {
+      "fecha1": "10/4/2023",
+      "fecha2": "30/5/2023",
+      "fecha3": "25/6/2023",
+      "examen": "08/7/2023"
     }
   ]
 }

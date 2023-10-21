@@ -11,6 +11,7 @@ export class DataService {
 
   urlApiD= "http://localhost:3300/docentes";
   urlApiA= "http://localhost:3300/asignaturas";
+  urlApiF= "http://localhost:3300/fechasEvaluaciones";
 
   constructor(private http:HttpClient) { }
 
@@ -24,5 +25,9 @@ export class DataService {
 
   cargarDocentes():Observable<iDocente>{
     return this.http.get<iDocente>(this.urlApiD);
+  }
+
+  cargarFechasEv(){
+    return this.http.get(this.urlApiF)
   }
 }

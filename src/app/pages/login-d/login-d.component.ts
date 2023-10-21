@@ -17,14 +17,7 @@ export class LoginDComponent {
     contrasena:""
   }
 
-  respArray=[/*{
-    id:0,
-    correo:"",
-    nombre:"",
-    apellido:"",
-    contrasena:"",
-    idAsignatura1:0,
-  idAsignatura2:0}*/]
+  respArray=[]
 
   respObject:iDocenteP={
     id:0,
@@ -51,19 +44,9 @@ export class LoginDComponent {
         this.respObject=this.respArray[0]
         if(this.respObject.correo===this.sendLogin.correo && this.respObject.contrasena===this.sendLogin.contrasena){
           this.router.navigateByUrl("/inicio")
+          sessionStorage.setItem('nombre',this.respObject.nombre)
         }
       }
-
-
-      /*else{console.log(this.respArray[0])
-        this.respObject=this.respArray[0]
-      }
-      console.log(this.respArray[0])
-      this.respObject=this.respArray[0]
-      //console.log(this.respObject.correo)
-      if(this.respObject.correo===this.sendLogin.correo && this.respObject.contrasena===this.sendLogin.contrasena){
-        this.router.navigateByUrl("/inicio")
-      }*/
     })
   }
 }
