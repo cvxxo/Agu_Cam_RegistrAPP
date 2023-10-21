@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { iDocente } from 'src/app/interfaces/interfaces';
 import { DataService } from 'src/app/services/data.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registro-d',
@@ -32,14 +33,21 @@ export class RegistroDComponent implements OnInit {
   }
 
   asignaturas=[]
+  docenteReg=[]
 
-  constructor(private data: DataService, private builder:FormBuilder) {}
+  constructor(private data: DataService, private authservice:AuthService) {}
 
   crearDocente2(){
-    if(this.valFormReg.valid){
-      console.log(this.newDocente);
-      this.data.crearDocente(this.newDocente).subscribe()
-    }
+    this.authservice.getUserByEmail(this.newDocente.correo).subscribe(resp => {
+      let listString=JSON.stringify(resp)
+      this.docenteReg=JSON.parse(listString)
+      console.log(this.docenteReg.length)
+      console.log(this.docenteReg)
+      if(this.valFormReg.valid && this.docenteReg.length===0){
+        console.log(this.newDocente)
+        this.data.crearDocente(this.newDocente).subscribe()
+      }
+    })
   }
 
   cargarAsig2(){

@@ -21,4 +21,8 @@ export class DataService {
   cargarAsig():Observable<iAsig>{
     return this.http.get<iAsig>(this.urlApiA);
   }
+
+  cargarDocentes():Observable<iDocente>{
+    return this.http.get<iDocente>(this.urlApiD);
+  }
 }

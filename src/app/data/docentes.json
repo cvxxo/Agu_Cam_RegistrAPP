@@ -17,15 +17,6 @@
       "idAsignatura1": "1",
       "idAsignatura2": "1",
       "id": 2
-    },
-    {
-      "correo": "prueba2@gmail.com",
-      "nombre": "adasdsad",
-      "apellido": "asdasdasd",
-      "contrasena": "asdasdad",
-      "idAsignatura1": "4",
-      "idAsignatura2": "3",
-      "id": 3
     }
   ],
   "asignaturas": [

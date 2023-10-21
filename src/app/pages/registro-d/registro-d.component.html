@@ -1,4 +1,5 @@
-<div style="text-align: center; margin: 1%;"><img src="assets/img/a.png"></div>
+<div style="background-image: url(assets/img/fondoduoc.jpg); width: 100%; background-repeat: no-repeat; height: 100%; background-size: 100%; background-position: center;">
+<div style="text-align: center; margin-bottom: 1%;"><img src="assets/img/a.png"></div>
 <div style="margin: 0 auto; width: 50%; background-color: #00193cf6; border-radius: 5%; height: 100%;">
     <h1 style="text-align: center; color: white;">Registro: Docentes.</h1>
     <hr style="border: 2px solid black;">
@@ -6,7 +7,7 @@
     <form [formGroup]="valFormReg" (ngSubmit)="crearDocente2()">
         <div class="form-group" style="width: 50%; margin: 0 auto; padding-top: 2%;">
             <label style="color: white;">Correo: </label>
-            <input type="email" name="correoD" placeholder="prueba@gmail.com" class="form-control" [(ngModel)]="newDocente.correo" formControlName="corD">
+            <input type="email" name="correoD" placeholder="duoc@gmail.com" class="form-control" [(ngModel)]="newDocente.correo" formControlName="corD">
             <p *ngIf="valFormReg.get('corD')?.hasError('email')" style="color: red; display: inline;">Formato de correo incorrecto</p>
         </div>
         <div class="form-group" style="width: 50%; margin: 0 auto; padding-top: 2%;">
@@ -39,10 +40,15 @@
             <select name="idasig2" id="idasigs2" class="form-select" [(ngModel)]="newDocente.idAsignatura2" formControlName="ida2">
                 <option *ngFor="let a of asignaturas" value="{{a['id']}}">{{a['nombre']}}</option>
             </select>
-            <p *ngIf="valFormReg.get('ida2')?.touched && valFormReg.get('ida1')?.invalid" style="color: red; display: inline;">No has seleccionado asignatura</p>
+            <p *ngIf="valFormReg.get('ida2')?.touched && valFormReg.get('ida2')?.invalid" style="color: red; display: inline;">No has seleccionado asignatura</p>
+        </div>
+        <br *ngIf="docenteReg.length!==0">
+        <div *ngIf="docenteReg.length!==0" class="alert alert-warning" style="margin-top: 5%; width: 50%; text-align: center; margin: 0 auto;">
+            <strong>ERROR:</strong> Esta cuenta ya existe!!
         </div>
         <br><br>
         <button routerLink="/login-d" class="btn btn-info" style="margin-left: 18%; margin-bottom: 5%;">Iniciar sesión</button>
         <button type="submit" routerLink="" class="btn btn-success" style="margin-left: 25%; margin-bottom: 5%;">Registrarse</button>
     </form>
+</div>
 </div>
