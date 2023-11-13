@@ -1,0 +1,24 @@
+.header1{
+    background-color: #1A1A1A ;
+    display: flow-root;
+}
+
+.texto1{
+    font-style: italic;
+    color: #FFB800;
+}
+
+.texto2{
+    font-style: italic;
+    color: white;
+}
+
+.margen1{
+    margin: 10%;
+}
+
+.fondo1{
+    background-color: #e2ac22;
+    height: 100vh;
+    padding-top: 1%;
+}

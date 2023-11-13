@@ -1,0 +1,58 @@
+<ion-header [translucent]="">
+  <ion-toolbar class="header-color">
+    <ion-title class="titulo" mode="md">Registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="contenido">
+  <div>
+    <ion-card class="fondocard">
+      <ion-card-header>
+          <ion-card-title mode="md" class="card_titulo">Ingresa tus datos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <form [formGroup]="ValidFormRegA">
+          <p>Todos los campos son obligatorios.</p>
+          <ion-item class="item" mode="md">
+            <ion-label position="floating">Nombre: </ion-label>
+            <ion-input type="text" placeholder="Juan" 
+                      name="nombre" [(ngModel)]="alumno.nombreA" formControlName="nomA"></ion-input>
+            <p *ngIf="ValidFormRegA.get('nomA')?.hasError('minlength')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Min. 3 caracteres</p>
+          </ion-item>
+
+          <ion-item class="item" mode="md">
+            <ion-label position="floating">Apellido: </ion-label>
+            <ion-input type="text" placeholder="Perez" 
+                      name="apellido" [(ngModel)]="alumno.apellidoA" formControlName="apeA"></ion-input>
+            <p *ngIf="ValidFormRegA.get('apeA')?.hasError('minlength')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Min. 3 caracteres</p>
+          </ion-item>
+
+          <ion-item class="item" mode="md">
+            <ion-label position="floating">Email: </ion-label>
+            <ion-input type="email" placeholder="marulete@duocuc.cl" 
+                      name="email" [(ngModel)]="alumno.correoA" formControlName="corA"></ion-input>
+            <p *ngIf="ValidFormRegA.get('corA')?.hasError('email')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Email invalido</p>
+          </ion-item>
+
+          <ion-item class="item" mode="md">
+            <ion-label position="floating">Password: </ion-label>
+            <ion-input type="password" placeholder="ConstraseñaSecreta123"
+                        name="password" [(ngModel)]="alumno.contrasenaA" formControlName="conA"></ion-input>
+            <p *ngIf="ValidFormRegA.get('conA')?.hasError('minlength')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Min. 8 caracteres</p>
+          </ion-item>
+          <br>
+          <ion-button (click)="registrarA()" expand="block" fill="solid" color="warning" shape="round" size="default"
+                      style="margin-top: 5%;">
+            Registrar
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

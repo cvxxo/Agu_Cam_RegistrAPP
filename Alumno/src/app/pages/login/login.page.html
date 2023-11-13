@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="header-color">
+    <ion-title class="titulo" mode="md">Iniciar sesión</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content [fullscreen]="false" class="contenido">
+  <ion-card class="fondocard">
+    <ion-card-header>
+        <ion-card-title mode="md" class="card_titulo">Ingresa tus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="ValidFormLogin">
+
+        <ion-item class="item" mode="md">
+          <ion-label position="floating">Email: </ion-label>
+          <ion-input type="email" placeholder="marulete@duocuc.cl" 
+                    name="email" [(ngModel)]="alumno.email" formControlName="corA"></ion-input>
+        </ion-item>
+
+        <ion-item class="item" mode="md">
+          <ion-label position="floating">Password: </ion-label>
+          <ion-input type="password" placeholder="ConstraseñaSecreta123"
+                      name="password" [(ngModel)]="alumno.password" formControlName="conA"></ion-input>
+          <p *ngIf="contrInco===1" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Contraseña incorrecta</p>
+        </ion-item>
+        <br>
+        <ion-button (click)="login()" expand="block" fill="solid" color="primary" shape="round" size="default"
+                    style="margin-top: 5%;">
+          Ingresar
+        </ion-button>
+        
+        <ion-button (click)="msjOlvideCont()" expand="block" fill="clear" class="oMContra_button" shape="round">            
+          Olvidé mi contraseña
+        </ion-button>
+        <br>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

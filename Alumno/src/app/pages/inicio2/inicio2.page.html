@@ -1,0 +1,106 @@
+<ion-menu contentId="menu-content" menuId="menu-content">
+  <ion-header>
+    <ion-toolbar class="colormenu3">
+      <ion-title (click)="cerrarMenu()" style="text-align: center;">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="colormenu2">
+    <ion-list class="colormenu">
+      <ion-menu-toggle *ngFor="let i of login_pages">
+        <ion-item [routerLink]="i.adressPage" detail="false">
+          <ion-icon slot="start" [name]="i.icon"></ion-icon>
+          {{i.nombre}}
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div id="menu-content">
+  <ion-header>
+    <ion-toolbar class="header-color">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="titulo">RegistrAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</div>
+<ion-content class="contenido" [fullscreen]="false">
+  <h2 style="margin-left: 4%;">Inicio</h2>
+  <ion-card class="fondocard" *ngIf="cardDatosDefault===1">
+    <ion-card-header>
+      <ion-card-title mode="md" class="card_titulo">Mis datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="validFormMod">
+        <ion-item class="item" mode="md">
+          <ion-label>Nombre: {{userActivo.nombreA}} {{userActivo.apellidoA}}</ion-label>
+        </ion-item>
+        <ion-item class="item" mode="md">
+          <ion-label style="display: block;">
+            Correo: 
+            <ion-label>{{userActivo.correoA}}</ion-label>
+            <ion-input style="border: 1px solid rgb(8, 8, 157); margin-top: 4%;" type="email" placeholder="nuevocorreo@ejemplo.cl" *ngIf="iconomodificarC===0" [(ngModel)]="datosNuevos.correoA" formControlName="corA"></ion-input>
+            <p *ngIf="validFormMod.get('corA')?.hasError('email')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Correo invalido</p>
+          </ion-label>
+          <ion-button (click)="iconomodificarCF()" expand="block" fill="outline" shape="round" *ngIf="iconomodificarC===1">
+            <img src="assets/editar.png" style="height: 25px; padding: 0%; margin: 0%;">
+          </ion-button>
+        </ion-item>
+        <ion-item class="item" mode="md">
+          <ion-label style="display: block;">
+            Contraseña: *****
+            <ion-input type="password" placeholder="contraseña123" *ngIf="iconomodificarP===0" [(ngModel)]="datosNuevos.contraA" formControlName="conA"></ion-input>
+            <p *ngIf="validFormMod.get('conA')?.hasError('minlength')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Min. 8 caracteres</p>
+          </ion-label>
+          <ion-button (click)="iconomodificarPF()" expand="block" fill="outline" shape="round" *ngIf="iconomodificarP===1">
+            <img src="assets/editar.png" style="height: 25px; padding: 0%; margin: 0%;">
+          </ion-button>
+        </ion-item>
+        <ion-button (click)="guardarCambios()" expand="block" fill="solid" shape="round" style="margin-top: 8%;" *ngIf="btnguardar===1">
+          Guardar cambios
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="fondocard" *ngIf="cardDatosDefault===0">
+    <ion-card-header>
+      <ion-card-title mode="md" class="card_titulo">Mis datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="validFormMod">
+        <ion-item class="item" mode="md">
+          <ion-label>Nombre: {{userActivo.nombreA}} {{userActivo.apellidoA}}</ion-label>
+        </ion-item>
+        <ion-item class="item" mode="md">
+          <ion-label style="display: block;">
+            Correo: 
+            <ion-label>{{userActivo.correoA}}</ion-label>
+            <ion-input style="border: 1px solid rgb(8, 8, 157); margin-top: 4%;" type="email" placeholder="nuevocorreo@ejemplo.cl" *ngIf="iconomodificarC===0" [(ngModel)]="datosNuevos.correoA" formControlName="corA"></ion-input>
+            <p *ngIf="validFormMod.get('corA')?.hasError('email')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Correo invalido</p>
+          </ion-label>
+          <ion-button (click)="iconomodificarCF()" expand="block" fill="outline" shape="round" *ngIf="iconomodificarC===1">
+            <img src="assets/editar.png" style="height: 25px; padding: 0%; margin: 0%;">
+          </ion-button>
+        </ion-item>
+        <ion-item class="item" mode="md">
+          <ion-label style="display: block;">
+            Contraseña: *****
+            <ion-input type="password" placeholder="contraseña123" *ngIf="iconomodificarP===0" [(ngModel)]="datosNuevos.contraA" formControlName="conA"></ion-input>
+            <p *ngIf="validFormMod.get('conA')?.hasError('minlength')" style="color: rgb(255, 187, 0); display: inline; background-color: rgba(255, 0, 0, 0.308);">Min. 8 caracteres</p>
+          </ion-label>
+          <ion-button (click)="iconomodificarPF()" expand="block" fill="outline" shape="round" *ngIf="iconomodificarP===1">
+            <img src="assets/editar.png" style="height: 25px; padding: 0%; margin: 0%;">
+          </ion-button>
+        </ion-item>
+        <ion-button (click)="guardarCambios()" expand="block" fill="solid" shape="round" style="margin-top: 8%;" *ngIf="btnguardar===1">
+          Guardar cambios
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button (click)="''" expand="block" fill="solid" shape="round" color="warning" style="margin-top: 20%; margin-left: 10%; margin-right: 10%;" size="large">
+    Leer QR
+  </ion-button>
+</ion-content>
