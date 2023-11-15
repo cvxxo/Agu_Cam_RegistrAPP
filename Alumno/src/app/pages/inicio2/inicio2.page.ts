@@ -25,6 +25,10 @@ export class Inicio2Page implements OnInit {
     })
   }
 
+  leerQR(){
+    this.router.navigateByUrl("/leerqr")
+  }
+
   cardDatosDefault=1
 
   userActivo: iAlumnosId={
