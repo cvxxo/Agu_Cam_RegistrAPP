@@ -10,8 +10,8 @@ export class BaseDeDatosService {
 
   constructor(private http:HttpClient) { }
 
-  urlApiA="http://localhost:3300/alumnos/";
-  urlApiBuscarA="http://localhost:3300/alumnos/?correoA="
+  urlApiA="http://192.168.0.150:3300/alumnos/";
+  urlApiBuscarA="http://192.168.0.150:3300/alumnos/?correoA="
 
   crearAlumno(newAlumno: iAlumnos):Observable<iAlumnos>{
     return this.http.post<iAlumnosId>(this.urlApiA, newAlumno);

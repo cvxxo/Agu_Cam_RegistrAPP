@@ -1,4 +1,4 @@
-<ion-menu contentId="menu-content" menuId="menu-content">
+<!--<ion-menu contentId="menu-content" menuId="menu-content">
   <ion-header>
     <ion-toolbar class="colormenu3">
       <ion-title (click)="cerrarMenu()" style="text-align: center;">Menú</ion-title>
@@ -7,7 +7,7 @@
   <ion-content class="colormenu2">
     <ion-list class="colormenu">
       <ion-menu-toggle *ngFor="let i of login_pages">
-        <ion-item [routerLink]="i.adressPage" detail="false">
+        <ion-item [routerLink]="i.adressPage2" detail="false">
           <ion-icon slot="start" [name]="i.icon"></ion-icon>
           {{i.nombre}}
         </ion-item>
@@ -24,7 +24,7 @@
       <ion-title class="titulo">RegistrAPP</ion-title>
     </ion-toolbar>
   </ion-header>
-</div>
+</div>-->
 <ion-content class="contenido" [fullscreen]="false">
   <h2 style="margin-left: 4%;">Inicio</h2>
   <ion-card class="fondocard" *ngIf="cardDatosDefault===1">
@@ -102,5 +102,9 @@
   
   <ion-button (click)="leerQR()" expand="block" fill="solid" shape="round" color="warning" style="margin-top: 20%; margin-left: 10%; margin-right: 10%;" size="large">
     Leer QR
+  </ion-button>
+
+  <ion-button (click)="cerrarsesion()" expand="block" fill="solid" shape="round" color="danger" style="margin-top: 20%; margin-left: 10%; margin-right: 10%;" size="default">
+    Cerrar sesión
   </ion-button>
 </ion-content>

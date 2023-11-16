@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 interface app_pages{
   nombre:string;
-  adressPage:string;
+  adressPage2:string;
   icon:string;
 }
 
@@ -19,7 +19,7 @@ interface app_pages{
 })
 export class Inicio2Page implements OnInit {
 
-  constructor(private menuC:MenuController, private bd:BaseDeDatosService, private alertC:AlertController, private router:Router) {
+  constructor(private bd:BaseDeDatosService, private alertC:AlertController, private router:Router) {
     this.bd.buscarAid(String(sessionStorage.getItem("id"))).subscribe(resp => {
       this.userActivo=resp 
     })
@@ -129,30 +129,26 @@ export class Inicio2Page implements OnInit {
     })
   }
 
-  abrirMenu(){
-    this.menuC.open('idmenu')
-  }
-
   login_pages: app_pages[]=[
     {
       nombre:'Inicio',
-      adressPage:'/inicio2',
+      adressPage2:'/inicio2',
       icon:'home'
     },
     {
       nombre:'Leer QR / Registrar asistencia',
-      adressPage:'/leerqr',
+      adressPage2:'/leerqr',
       icon:'qr-code-outline'
     },
     {
       nombre:'Historial',
-      adressPage:'/historial',
+      adressPage2:'/historial',
       icon:'bookmark-outline'
     },
   ]
 
-  cerrarMenu(){
-    this.menuC.close('menu-content');
+  cerrarsesion(){
+    this.router.navigateByUrl("/login")
   }
 
 }
