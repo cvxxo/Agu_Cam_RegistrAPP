@@ -1,0 +1,144 @@
+{
+  "docentes": [
+    {
+      "correo": "prueba@gmail.com",
+      "nombre": "UserPrueba",
+      "apellido": "UserPrueba",
+      "contrasena": "123456780",
+      "idAsignatura1": "1",
+      "idAsignatura2": "2",
+      "id": 1
+    },
+    {
+      "correo": "prueba2@gmail.com",
+      "nombre": "Jorge",
+      "apellido": "Muñoz",
+      "contrasena": "abc12345",
+      "idAsignatura1": "1",
+      "idAsignatura2": "3",
+      "id": 2
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": 1,
+      "nombre": "Nivelación Matemática",
+      "seccion": "010D",
+      "año": 2023,
+      "semestre": 1,
+      "horas_sem": 5
+    },
+    {
+      "id": 2,
+      "nombre": "Inglés",
+      "seccion": "009D",
+      "año": 2023,
+      "semestre": 1,
+      "horas_sem": 5
+    },
+    {
+      "id": 3,
+      "nombre": "Emprendimiento",
+      "seccion": "008D",
+      "año": 2023,
+      "semestre": 2,
+      "horas_sem": 5
+    },
+    {
+      "id": 4,
+      "nombre": "Arquitectura",
+      "seccion": "007D",
+      "año": 2023,
+      "semestre": 2,
+      "horas_sem": 5
+    }
+  ],
+  "fechasEvaluaciones": [
+    {
+      "fecha1": "10/4/2023",
+      "fecha2": "30/5/2023",
+      "fecha3": "25/6/2023",
+      "examen": "08/7/2023"
+    }
+  ],
+  "alumnos": [
+    {
+      "correoA": "a@gmail.com",
+      "nombreA": "Agustin",
+      "apellidoA": "Valenzuela",
+      "contrasenaA": "12345678",
+      "id": 1
+    },
+    {
+      "correoA": "marulete@gmail.com",
+      "nombreA": "Juan",
+      "apellidoA": "Perez",
+      "contrasenaA": "12345678",
+      "id": 2
+    }
+  ],
+  "clases": [
+    {
+      "id": 1,
+      "nomYApeD": "Aloe Vera",
+      "correoD": "prueba00@gmail.com",
+      "asignatura": "Hola",
+      "fecha": "11/11/1100"
+    },
+    {
+      "id": 2,
+      "nomYApeD": "UserPrueba UserPrueba",
+      "correoD": "prueba@gmail.com",
+      "fecha": "2023-11-17",
+      "asignatura": "Inglés"
+    },
+    {
+      "id": 3,
+      "nomYApeD": "UserPrueba UserPrueba",
+      "correoD": "prueba@gmail.com",
+      "fecha": "2023-11-17",
+      "asignatura": "Arquitectura"
+    },
+    {
+      "id": 4,
+      "nomYApeD": "UserPrueba UserPrueba",
+      "correoD": "prueba@gmail.com",
+      "fecha": "2023-11-17",
+      "asignatura": "Nivelación Matemática"
+    }
+  ],
+  "alumnosPresentes": [
+    {
+      "id": 1,
+      "idClase": 1,
+      "nomYApe": "Agu",
+      "correoA": "agu@gmail.com",
+      "asignatura": "prueba",
+      "fecha": "11/11/1100"
+    },
+    {
+      "idClase": 5,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "a@gmail.com",
+      "asignatura": "Emprendimiento",
+      "fecha": "2023-11-16",
+      "id": 2
+    },
+    {
+      "idClase": 7,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "a@gmail.com",
+      "asignatura": "Emprendimiento",
+      "fecha": "2023-11-17",
+      "id": 3
+    },
+    {
+      "idClase": 7,
+      "nomYApe": "Juan Perez",
+      "correoA": "marulete@gmail.com",
+      "asignatura": "Emprendimiento",
+      "fecha": "2023-11-17",
+      "id": 4
+    }
+  ]
+}
