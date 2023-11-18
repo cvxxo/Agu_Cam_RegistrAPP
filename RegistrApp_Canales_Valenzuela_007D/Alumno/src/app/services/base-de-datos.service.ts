@@ -35,4 +35,8 @@ export class BaseDeDatosService {
     return this.http.post<ialumnosPresentesId>(environment.ApiAlumnosP, registro)
   }
 
+  obtenerHist(correoA:string){
+    return this.http.get(environment.ApiObtHist+correoA)
+  }
+
 }

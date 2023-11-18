@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseDeDatosService } from 'src/app/services/base-de-datos.service';
 
 @Component({
   selector: 'app-historial',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistorialPage implements OnInit {
 
-  constructor() { }
+  constructor(private dataB:BaseDeDatosService) { }
 
   ngOnInit() {
+    this.dataB.obtenerHist(String(sessionStorage.getItem("correoA"))).subscribe(resp => {
+      let stringify = JSON.stringify(resp)
+      this.historial = JSON.parse(stringify)
+    })
   }
+
+  historial=[]
 
 }

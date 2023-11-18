@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+import { AlertController } from '@ionic/angular';
 import { ialumnosPresentes, ialumnosPresentesId, igenerarQR } from 'src/app/interfaces/interfaces';
 import { BaseDeDatosService } from 'src/app/services/base-de-datos.service';
 
@@ -11,9 +13,10 @@ import { BaseDeDatosService } from 'src/app/services/base-de-datos.service';
 
 export class LeerqrPage implements OnInit {
 
-  constructor(private dataBase:BaseDeDatosService) { }
+  constructor(private dataBase:BaseDeDatosService, private alertController:AlertController, private router:Router) { }
 
-  msjQR=""
+  msjQR=localStorage.getItem("msjQR")
+  msjQRPrevio=localStorage.getItem("msjQRPrevio")
 
   ngOnInit() {
     this.startScan()
@@ -47,19 +50,49 @@ export class LeerqrPage implements OnInit {
     const result = await BarcodeScanner.startScan(); // start scanning and wait for a result
     // if the result has content
     if (result.hasContent) {
-      console.log(result.content); // log the raw scanned content
+      //console.log(result.content); // log the raw scanned content
+      //console.log(this.msjQR)
       document.querySelector('body')?.classList.remove('scanner-active');
-      this.msjQR=result.content
-      this.dataBase.obtenerClase(this.msjQR).subscribe(resp => {
-        this.obtenerClase=resp
-        console.log(this.obtenerClase)
-        this.alumnosPresentes.idClase=resp.id
-        this.alumnosPresentes.asignatura=resp.asignatura
-        this.alumnosPresentes.fecha=resp.fecha
-        console.log(this.alumnosPresentes)
-        this.dataBase.ingAlumnoPresente(this.alumnosPresentes).subscribe()
-      })
+      //console.log(result.content)
+      console.log(localStorage.getItem("msjQRPrevio"))
+      if(this.msjQRPrevio!==result.content){
+        this.dataBase.obtenerClase(result.content).subscribe(resp => {
+          this.obtenerClase=resp
+          //console.log(this.obtenerClase)
+          this.alumnosPresentes.idClase=resp.id
+          this.alumnosPresentes.asignatura=resp.asignatura
+          this.alumnosPresentes.fecha=resp.fecha
+          //console.log(this.alumnosPresentes)
+          this.dataBase.ingAlumnoPresente(this.alumnosPresentes).subscribe()
+          this.alertAsist()
+          this.router.navigateByUrl("/inicio2")
+        }); localStorage.setItem("msjQRPrevio",result.content)
+      }
+      else{
+        this.alertAsistReady()
+        this.router.navigateByUrl("/inicio2")
+      } 
     }
+  }
+
+  async alertAsist() {
+    const alert = await this.alertController.create({
+      header: 'Asistencia registrada!',
+      message: 'Revisa el historial para confirmar...',
+      buttons: ['Ok'],
+    });
+
+    await alert.present();
+  }
+
+  async alertAsistReady() {
+    const alert = await this.alertController.create({
+      header: 'ERROR!',
+      message: 'Alumno ya registrado!',
+      buttons: ['Ok'],
+    });
+
+    await alert.present();
   }
 
   stopScan(){

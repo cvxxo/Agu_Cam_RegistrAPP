@@ -1,13 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>historial</ion-title>
+<ion-header>
+  <ion-toolbar class="header-color">
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="'/inicio2'">Inicio</ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Historial</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">historial</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="false">
+  <ion-item style="margin-bottom: 1%; border-bottom: 1px solid rgb(31, 17, 233); background-color: black; margin-top: 1%;" *ngFor="let h of historial">
+    <ion-label>
+      <h4 style="color: rgb(19, 224, 224);">Fecha: {{h['fecha']}}</h4>
+      <p style="color: rgb(241, 230, 230);">Id Clase: {{h['idClase']}}</p>
+      <p style="color: rgb(241, 230, 230);">Asignatura: {{h['asignatura']}}</p>
+      <p style="color: rgb(241, 230, 230);">Nombre: {{h['nomYApe']}}</p>
+      <p style="color: rgb(241, 230, 230);">Correo: {{h['correoA']}}</p>
+    </ion-label>
+  </ion-item>
 </ion-content>
