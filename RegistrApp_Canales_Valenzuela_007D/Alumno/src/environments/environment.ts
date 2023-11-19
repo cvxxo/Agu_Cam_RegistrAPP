@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  ApiA:"http://192.168.0.150:3300/alumnos/",
-  ApiBuscarAxEmail:"http://192.168.0.150:3300/alumnos/?correoA=",
-  ApiClases:"http://192.168.0.150:3300/clases/",
-  ApiAlumnosP:"http://192.168.0.150:3300/alumnosPresentes/",
-  ApiObtHist:"http://192.168.0.150:3300/alumnosPresentes/?correoA="
+  ApiA:"http://registrappcv.ddns.net:3300/alumnos/",
+  ApiBuscarAxEmail:"http://registrappcv.ddns.net:3300/alumnos/?correoA=",
+  ApiClases:"http://registrappcv.ddns.net:3300/clases/",
+  ApiAlumnosP:"http://registrappcv.ddns.net:3300/alumnosPresentes/",
+  ApiObtHist:"http://registrappcv.ddns.net:3300/alumnosPresentes/?correoA="
 };
 
 /*

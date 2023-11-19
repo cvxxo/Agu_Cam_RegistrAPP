@@ -1,9 +1,9 @@
 {
   "docentes": [
     {
-      "correo": "prueba@gmail.com",
-      "nombre": "UserPrueba",
-      "apellido": "UserPrueba",
+      "correo": "pr@g",
+      "nombre": "Patricia",
+      "apellido": "Alvarez",
       "contrasena": "123456780",
       "idAsignatura1": "1",
       "idAsignatura2": "2",
@@ -14,8 +14,8 @@
       "nombre": "Jorge",
       "apellido": "Muñoz",
       "contrasena": "abc12345",
-      "idAsignatura1": "1",
-      "idAsignatura2": "3",
+      "idAsignatura1": "3",
+      "idAsignatura2": "4",
       "id": 2
     }
   ],
@@ -63,7 +63,7 @@
   ],
   "alumnos": [
     {
-      "correoA": "a@gmail.com",
+      "correoA": "ag@gmail.com",
       "nombreA": "Agustin",
       "apellidoA": "Valenzuela",
       "contrasenaA": "12345678",
@@ -80,30 +80,65 @@
   "clases": [
     {
       "id": 1,
-      "nomYApeD": "Aloe Vera",
+      "nomYApeD": "Prueba",
       "correoD": "prueba00@gmail.com",
-      "asignatura": "Hola",
+      "asignatura": "Prueba",
       "fecha": "11/11/1100"
     },
     {
       "id": 2,
-      "nomYApeD": "UserPrueba UserPrueba",
+      "nomYApeD": "Patricia Alvarez",
       "correoD": "prueba@gmail.com",
-      "fecha": "2023-11-17",
-      "asignatura": "Inglés"
+      "fecha": "2023-11-18",
+      "asignatura": "Nivelación Matemática"
     },
     {
       "id": 3,
-      "nomYApeD": "UserPrueba UserPrueba",
+      "nomYApeD": "Patricia Alvarez",
       "correoD": "prueba@gmail.com",
-      "fecha": "2023-11-17",
-      "asignatura": "Arquitectura"
+      "fecha": "2023-11-18",
+      "asignatura": "Inglés"
     },
     {
       "id": 4,
-      "nomYApeD": "UserPrueba UserPrueba",
+      "nomYApeD": "Patricia Alvarez",
       "correoD": "prueba@gmail.com",
-      "fecha": "2023-11-17",
+      "fecha": "2023-11-25",
+      "asignatura": "Nivelación Matemática"
+    },
+    {
+      "id": 5,
+      "nomYApeD": "Patricia Alvarez",
+      "correoD": "prueba@gmail.com",
+      "fecha": "2023-11-30",
+      "asignatura": "Inglés"
+    },
+    {
+      "id": 6,
+      "nomYApeD": "Patricia Alvarez",
+      "correoD": "prueba@gmail.com",
+      "fecha": "2023-12-08",
+      "asignatura": "Nivelación Matemática"
+    },
+    {
+      "id": 7,
+      "nomYApeD": "Patricia Alvarez",
+      "correoD": "prueba@gmail.com",
+      "fecha": "2023-12-10",
+      "asignatura": "Nivelación Matemática"
+    },
+    {
+      "id": 8,
+      "nomYApeD": "Patricia Alvarez",
+      "correoD": "pr@g",
+      "fecha": "2023-11-18",
+      "asignatura": "Nivelación Matemática"
+    },
+    {
+      "id": 9,
+      "nomYApeD": "Patricia Alvarez",
+      "correoD": "pr@g",
+      "fecha": "2023-11-18",
       "asignatura": "Nivelación Matemática"
     }
   ],
@@ -111,34 +146,82 @@
     {
       "id": 1,
       "idClase": 1,
-      "nomYApe": "Agu",
-      "correoA": "agu@gmail.com",
+      "nomYApe": "prueba",
+      "correoA": "prueba@gmail.com",
       "asignatura": "prueba",
       "fecha": "11/11/1100"
+    },
+    {
+      "idClase": 2,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "a@gmail.com",
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-11-18",
+      "id": 2
+    },
+    {
+      "idClase": 3,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "a@gmail.com",
+      "asignatura": "Inglés",
+      "fecha": "2023-11-18",
+      "id": 3
+    },
+    {
+      "idClase": 4,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "a@gmail.com",
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-11-25",
+      "id": 4
     },
     {
       "idClase": 5,
       "nomYApe": "Agustin Valenzuela",
       "correoA": "a@gmail.com",
-      "asignatura": "Emprendimiento",
-      "fecha": "2023-11-16",
-      "id": 2
+      "asignatura": "Inglés",
+      "fecha": "2023-11-30",
+      "id": 5
+    },
+    {
+      "idClase": 6,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "a@gmail.com",
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-12-08",
+      "id": 6
     },
     {
       "idClase": 7,
       "nomYApe": "Agustin Valenzuela",
       "correoA": "a@gmail.com",
-      "asignatura": "Emprendimiento",
-      "fecha": "2023-11-17",
-      "id": 3
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-12-10",
+      "id": 7
     },
     {
-      "idClase": 7,
-      "nomYApe": "Juan Perez",
-      "correoA": "marulete@gmail.com",
-      "asignatura": "Emprendimiento",
-      "fecha": "2023-11-17",
-      "id": 4
+      "idClase": 8,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "ag@gmail.com",
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-11-18",
+      "id": 8
+    },
+    {
+      "idClase": 8,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "ag@gmail.com",
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-11-18",
+      "id": 9
+    },
+    {
+      "idClase": 9,
+      "nomYApe": "Agustin Valenzuela",
+      "correoA": "ag@gmail.com",
+      "asignatura": "Nivelación Matemática",
+      "fecha": "2023-11-18",
+      "id": 10
     }
   ]
 }

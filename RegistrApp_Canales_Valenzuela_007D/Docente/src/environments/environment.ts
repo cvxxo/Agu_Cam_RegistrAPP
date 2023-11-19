@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  urlApiDxE:"http://192.168.0.150:3300/docentes/?correo=",
-  urlApiD:"http://192.168.0.150:3300/docentes",
-  urlApiA:"http://192.168.0.150:3300/asignaturas",
-  urlApiF:"http://192.168.0.150:3300/fechasEvaluaciones",
-  urlApiQRG:"http://192.168.0.150:3300/clases"
+  urlApiDxE:"http://registrappcv.ddns.net:3300/docentes/?correo=",
+  urlApiD:"http://registrappcv.ddns.net:3300/docentes",
+  urlApiA:"http://registrappcv.ddns.net:3300/asignaturas",
+  urlApiF:"http://registrappcv.ddns.net:3300/fechasEvaluaciones",
+  urlApiQRG:"http://registrappcv.ddns.net:3300/clases"
 };
 
 /*
