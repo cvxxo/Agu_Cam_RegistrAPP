@@ -1,7 +1,7 @@
 # RegistrAPP_Canales_Valenzuela_007D
 Repositorio de proyecto semestral "REGISTRAR ASISTENCIA" (Docente: genera QR, Alumno: lee QR), Universidad: Duoc UC, Asignatura: programación de aplicaciones móviles Año: 2023-2
 
-
+PRUEBA VIDEO: https://duoccl0-my.sharepoint.com/:v:/g/personal/ag_valenzuelav_duocuc_cl/Edsz-GYImfFPvsbCZdxIT9AB71cZQr-hblYLkrFS4nHI_w?e=Jx6f6C
 
 -. Primero debemos descargar node.js para que funcionen los comandos de instalación npm.
 En el simbolo del sistema tendremos que ejecutar los siguientes comandos de instalación npm:
